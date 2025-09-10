@@ -26,7 +26,7 @@ Visualization Generator は StructNote の **可視化エンジン** であり�
 {
   "content": "任务A -> 任务B -> 任务C"
 }
-
+```
 ### 2.3 出力 (Response)
 
 成功時のレスポンス例:
@@ -38,7 +38,7 @@ Visualization Generator は StructNote の **可視化エンジン** であり�
     "mermaid": "graph TD; A[任务A] --> B[任务B] --> C[任务C];"
   }
 }
-
+```
 ### 2.4 エラー処理
 
 失敗時のレスポンス例:
