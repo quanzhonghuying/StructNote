@@ -27,12 +27,12 @@ StructNote は、ユーザーが入力または検索したテキストを
 ```mermaid
 graph TD
     user[ユーザー]
-    fe["フロントエンド\n(React + Chrome Extension)"]
-    api["バックエンド API\n(FastAPI, Python)"]
+    fe["フロントエンド(React + Chrome Extension)"]
+    api["バックエンド API(FastAPI, Python)"]
     db[(SQLite データベース)]
-    openai["OpenAI API\n(GPT, Embeddings)"]
-    viz["可視化エンジン\n(Mermaid.js, diagrams)"]
-    render["ブラウザ描画\n(Mermaid.js)"]
+    openai["OpenAI API(GPT, Embeddings)"]
+    viz["可視化エンジン(Mermaid.js, diagrams)"]
+    render["ブラウザ描画(Mermaid.js)"]
 
     user --> fe
     fe --> api
