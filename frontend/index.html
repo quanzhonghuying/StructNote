@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StructNote Visualization</title>
+  <!-- Mermaid (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: false });</script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial; margin: 24px; }
+    textarea, select, button { font-size: 14px; margin-top: 8px; }
+    #diagram { margin-top: 16px; border: 1px solid #ddd; padding: 12px; border-radius: 8px; }
+    #status { margin-top: 8px; color: #666; font-size: 12px; }
+    label { display: inline-block; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Visualization Generator</h1>
+  <label for="input">テキスト入力（例: A -> B -> C）</label>
+  <textarea id="input" rows="4" cols="60" placeholder="例: 任务A -> 任务B -> 任务C"></textarea>
+
+  <label for="direction">方向 (TD/LR)</label>
+  <select id="direction">
+    <option value="TD" selected>TD（上→下）</option>
+    <option value="LR">LR（左→右）</option>
+  </select>
+
+  <div>
+    <button id="generate">生成</button>
+    <span id="status" aria-live="polite"></span>
+  </div>
+
+  <div class="mermaid" id="diagram"></div>
+  <!-- Frontend logic -->
+  <script src="mermaid_renderer.js"></script>
+</body>
+</html>
+
